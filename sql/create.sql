@@ -1,4 +1,4 @@
-CREATE TABLE User
+CREATE TABLE user
 (
     UserID      INT AUTO_INCREMENT PRIMARY KEY,
     Username    VARCHAR(50) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE User
     WeChatID    VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Shop
+CREATE TABLE shop
 (
     ShopID      INT AUTO_INCREMENT PRIMARY KEY,
     ShopName    VARCHAR(100) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE Shop
     Longitude   DOUBLE
 );
 
-CREATE TABLE CheckIn
+CREATE TABLE check_in
 (
     CheckInID            INT AUTO_INCREMENT PRIMARY KEY,
     UserID               INT,
@@ -28,7 +28,7 @@ CREATE TABLE CheckIn
     FOREIGN KEY (ShopID) REFERENCES Shop (ShopID)
 );
 
-CREATE TABLE Favorite
+CREATE TABLE favorite
 (
     FavoriteID   INT AUTO_INCREMENT PRIMARY KEY,
     UserID       INT,
@@ -38,7 +38,7 @@ CREATE TABLE Favorite
     FOREIGN KEY (ShopID) REFERENCES Shop (ShopID)
 );
 
-CREATE TABLE BrowsingHistory
+CREATE TABLE browsing_history
 (
     BrowsingID   INT AUTO_INCREMENT PRIMARY KEY,
     UserID       INT,
@@ -48,7 +48,7 @@ CREATE TABLE BrowsingHistory
     FOREIGN KEY (ShopID) REFERENCES Shop (ShopID)
 );
 
-CREATE TABLE UserFoodInfo
+CREATE TABLE user_food_info
 (
     UserID                 INT PRIMARY KEY,
     VisitedShopCount       INT,
@@ -57,3 +57,4 @@ CREATE TABLE UserFoodInfo
     FoodSearchingFrequency VARCHAR(50),
     FOREIGN KEY (UserID) REFERENCES User (UserID)
 );
+
