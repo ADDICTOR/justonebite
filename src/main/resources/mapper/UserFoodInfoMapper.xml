@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zachary.justonebite.mapper.UserFoodInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.zachary.justonebite.pojo.UserFoodInfo">
+            <id property="userid" column="UserID" jdbcType="INTEGER"/>
+            <result property="visitedshopcount" column="VisitedShopCount" jdbcType="INTEGER"/>
+            <result property="favoritecheckintime" column="FavoriteCheckInTime" jdbcType="VARCHAR"/>
+            <result property="favoritefoodstyle" column="FavoriteFoodStyle" jdbcType="VARCHAR"/>
+            <result property="foodsearchingfrequency" column="FoodSearchingFrequency" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        UserID,VisitedShopCount,FavoriteCheckInTime,
+        FavoriteFoodStyle,FoodSearchingFrequency
+    </sql>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zachary.justonebite.mapper.ShopMapper">
+
+    <resultMap id="BaseResultMap" type="com.zachary.justonebite.pojo.Shop">
+            <id property="shopid" column="ShopID" jdbcType="INTEGER"/>
+            <result property="shopname" column="ShopName" jdbcType="VARCHAR"/>
+            <result property="phonenumber" column="PhoneNumber" jdbcType="VARCHAR"/>
+            <result property="ownerwechat" column="OwnerWeChat" jdbcType="VARCHAR"/>
+            <result property="address" column="Address" jdbcType="VARCHAR"/>
+            <result property="latitude" column="Latitude" jdbcType="DOUBLE"/>
+            <result property="longitude" column="Longitude" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ShopID,ShopName,PhoneNumber,
+        OwnerWeChat,Address,Latitude,
+        Longitude
+    </sql>
+</mapper>
